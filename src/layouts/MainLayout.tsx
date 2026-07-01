@@ -94,13 +94,18 @@ function SidebarSection({
               </Box>
 
               <ListItemText
-                primary={item.text}
-                primaryTypographyProps={{
-                  fontSize: 18,
-                  fontWeight: active ? 800 : 700,
-                  color: active ? "#143f34" : "#68788a",
-                }}
-              />
+                primary={
+                    <Typography
+                    sx={{
+                        fontSize: 18,
+                        fontWeight: active ? 800 : 700,
+                        color: active ? "#143f34" : "#68788a",
+                    }}
+                    >
+                    {item.text}
+                    </Typography>
+                }
+                />
             </ListItemButton>
           );
         })}
